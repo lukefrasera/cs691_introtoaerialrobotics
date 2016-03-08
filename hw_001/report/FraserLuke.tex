@@ -1,0 +1,34 @@
+\documentclass[letter]{IEEEtran}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+
+\title{Voltage Estimation}
+\date{\today}
+\begin{document}
+
+\author{Luke Fraser}
+\maketitle
+\begin{abstract}
+In this assignment we investigate the use of a kalman filter to estimate a variable. In the specifics of the problem we are estimating the true voltage of a noisy sensor reading. This simulates a more real-world application of the kalman filter and its use. The dimensionality of the sensor readings is $x \in \mathbb{R}^1$. This defines the space of our estimation as it is a single variable one dimensional space.
+\end{abstract}
+
+\section{Introduction}
+The Kalman filter is an extremely useful tool for estimating noisy variables in a system. Its uses stretch far beyond uses in drone state estimation. It can be used within an IMU, as a tracker for computer vision, reading temperature readings, etc. Kalman filter uses extent into many domains. As a basic kalman filter is a linear estimator it is very fast and simple to use and implement making it perfect for different applications. Although the Kalman filter is a very capable estimator its simplicity limits is capabilities.
+
+The Kalman filter due to its assumption of linearity it is only meant handle estimation of variable that abide by this assumption. In the case of state estimation of a quad-rotor pose in $\mathbb{R}^3$ the kalman filter does not perform as well. This is due to the non-linearity of the state of the drone. To fix this problem the extended kalman filter (EKF) was created to handle the non-linear nature of real-world state estimation problems.
+
+Today EKF's are used to solve many complex estimation problems in real-time. A more simple alternative to drones is the estimation of a car. As the degrees of freedom are smaller EKF performance on cars has been well tuned and can be used to help produce self-driving cars.
+
+\subsection{Kalman Filter}
+The Kalman filter can be broken down into two stages:
+\begin{itemize}
+\item Prediction Step
+\item Update Step
+\end{itemize}
+\section{Assignment}
+
+\end{document}
