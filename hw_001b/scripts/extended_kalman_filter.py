@@ -45,7 +45,7 @@ class EKF:
         self.original = []
         self.estiamtes = []
         self.error_cov = []
-        self.num_iter = 5000
+        self.num_iter = 6000
         self.iter_count = 0
         self.dt = 0
     def ReceiveImuData(self, msg):
